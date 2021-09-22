@@ -1,0 +1,138 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+.whole-app{
+  min-width: 100vw;
+  min-height: 100vh;
+
+  background-color: rgb(81, 24, 134);
+  position: relative;
+}
+.App{
+  background-color: black;
+  min-width: 500px;
+  min-height: 600px;
+  margin: auto;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  color: #fff;
+}
+.container{
+  width: 90%;
+  margin: auto;
+}
+
+
+  
+
+  .task{
+    background-color: rgb(161, 60, 156);
+    margin: 5px 0;
+    display: flex;
+    padding: 10px 20px;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  .task.show{
+    border-left: 5px solid rgb(53, 179, 53);
+  }
+  .task h1{
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .task p{
+    font-size: 0.8rem;
+  }
+
+  .deletebtn{
+    background-color: rgb(218, 45, 45);
+    color:wheat;
+  }
+
+  .form-control{
+    display: flex;
+    flex-direction: column;
+    padding: 5px 0;
+  }
+  
+  .form-control input{
+    height:35px;
+    outline: none;
+    margin:3px 0px;
+  }
+
+  .reminder{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0px;
+  }
+  .reminder label{
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  .reminder input{
+    height: 20px;
+    width: 20px;
+  }
+  .save-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+   
+  }
+  .save-btn button{
+    cursor: pointer;
+    background-color: rgb(32, 136, 139);
+    color:#fff;
+    height: 35px;
+    width: 300px;
+    outline: none;
+    border: none;
+  }
+.about{
+  padding: 20px 0px;
+}
+  .footer {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0px;
+
+  }
+
+  @media only screen and (max-width:468px) {
+
+    .App{
+      border:1px solid black;
+      width: 96vw;
+      min-height: 96vh;
+      overflow: scroll;
+      margin: auto;
+      position: absolute;
+      top:0;
+      left:0;
+      transform: translate(0,0);
+    }
+    .form-control{
+      padding: 15px 0;
+    }  
+    .form-control input{
+      width:96%;
+    }
+
+    
+    
+  }
