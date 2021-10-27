@@ -1,6 +1,7 @@
 import {call} from 'redux-saga/effects'
 import { requestPatchMethod } from '../request/PatchMethod';
 import { requestSingleUser } from '../request/Single';
+import { handleGetUser } from './user';
 
 export function* handlePatchMethod(action){
     try{
@@ -10,6 +11,7 @@ export function* handlePatchMethod(action){
                 const updated={reminder:!newEl[0].reminder}
                const newAr=[action.payload,updated]
                 yield call(requestPatchMethod,newAr);
+                yield call(handleGetUser);
                 
     
               
